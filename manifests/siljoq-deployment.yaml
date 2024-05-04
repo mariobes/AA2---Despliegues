@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siljoq
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: siljoq
+  template:
+    metadata:
+      labels:
+        app: siljoq
+    spec:
+      containers:
+      - name: siljoq
+        image: mariozgz/siljoq:1.0
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "80m"
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
