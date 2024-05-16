@@ -8,7 +8,7 @@ on:
 env:
   ECR_REPOSITORY: mariozgz/siljoq:1.0
   EKS_CLUSTER_NAME: AA2
-  AWS_REGION: us-east-1 
+  AWS_REGION: us-east-1  
 
 jobs:
 
